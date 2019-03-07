@@ -1,0 +1,14 @@
+
+#   ---------------------------------------
+#   ALIASES
+#   ---------------------------------------
+
+# Folders
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ~="cd ~"
+alias -- -="cd -"
+
+# Easy file access
+alias hosts="sudo vim /etc/hosts"
