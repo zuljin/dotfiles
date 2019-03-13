@@ -1,0 +1,19 @@
+service apache2 stop
+sleep 2
+sudo docker start redis
+sudo docker start memcached
+sudo docker start core
+
+sudo rm -rf /datos/run/apache2.pid
+
+sudo docker start front53
+sleep 3
+
+sudo docker start userpanel
+sleep 3
+
+echo "Los containers levantados son:"
+sudo docker ps
+do rm -rf /datos/run/apache2.pid
+
+sleep 3
