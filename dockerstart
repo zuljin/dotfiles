@@ -12,7 +12,7 @@ sleep 3
 sudo docker start userpanel
 sleep 3
 
-echo "Los containers levantados son:"
+echo "Containers:"
 sudo docker ps
 do rm -rf /datos/run/apache2.pid
 
