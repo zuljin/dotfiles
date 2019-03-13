@@ -1,0 +1,111 @@
+# Conky settings #
+
+background yes
+update_interval 1.0
+double_buffer yes
+no_buffers yes
+
+# Window specifications #
+own_window yes
+own_window_type normal
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_transparent false
+own_window_title Zuljin
+own_window_colour d6d5db
+
+minimum_size 230
+# Alignment #
+alignment top_right
+gap_x 20
+gap_y 15
+border_inner_margin 15
+border_outer_margin 0
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+# Text settings #
+use_xft yes
+xftalpha 1
+xftfont Raleway Black:size=10
+
+override_utf8_locale yes
+
+imlib_cache_size 0
+
+# Color scheme #
+default_color 000000
+
+color1 0099CC
+color2 9933CC
+color3 669900
+color4 FF8800
+color5 CC0000
+color6 AAAAAA
+color7 484848
+color8 ea4845
+color9 000000
+
+
+TEXT
+${color8}${hr}${color}
+${font Raleway:weight=Bold:size=44}${color8}${alignc}${time %H}${color}${font Raleway:weight=Regular:size=30}:${color9}${time %M}${alignc}
+${font Raleway:weight=Medium:size=12}${alignc}${time %d %B %Y}
+${font Raleway:size=10}${color8}${hr}
+#${if_existing /proc/net/route wlan0}
+#${color1}Up:${color} ${color3}${upspeed wlan0}${color}${alignr}${color1}Down:${color} ${color3}${downspeed wlan0}${color}
+#${upspeedgraph wlan0 50,120 FF8800 FF8800}${alignr}${downspeedgraph wlan0 50,120 FF8800 FF8800}
+#${color1}Sent:${color} ${color2}${totalup wlan0}${color}${alignr}${color1}Received:${color} ${color2}${totaldown wlan0}${color}
+#${else}${if_existing /proc/net/route wlan1}
+#${color1}Up:${color} ${color3}${upspeed wlan1}${color}${alignr}${color1}Down:${color} ${color3}${downspeed wlan1}${color}
+#${upspeedgraph wlan1 50,120 FF8800 FF8800}${alignr}${downspeedgraph wlan1 50,120 FF8800 FF8800}
+#${color1}Sent:${color} ${color2}${totalup wlan1}${color}${alignr}${color1}Received:${color} ${color2}${totaldown wlan1}${color}
+#${else}${if_existing /proc/net/route eth0}
+#${color1}Up:${color} ${color3}${upspeed eth0}${color}${alignr}${color1}Down:${color} ${color3}${downspeed eth0}${color}
+#${upspeedgraph eth0 50,120 FF8800 FF8800}${alignr}${downspeedgraph eth0 50,120 FF8800 FF8800}
+#${color1}Sent:${color} ${color2}${totalup eth0}${color}${alignr}${color1}Received:${color} ${color2}${totaldown eth0}${color}
+#${else}${if_existing /proc/net/route eth1}
+#${color1}Up:${color} ${color3}${upspeed eth1}${color}${alignr}${color1}Down:${color} ${color3}${downspeed eth1}${color}
+#${upspeedgraph eth1 50,120 FF8800 FF8800}${alignr}${downspeedgraph eth1 50,120 FF8800 FF8800}
+#${color1}Sent:${color} ${color2}${totalup eth1}${color}${alignr}${color1}Received:${color} ${color2}${totaldown eth1}${color}
+#${else}${if_existing /proc/net/route ppp0}
+#${color1}Up:${color} ${color3}${upspeed ppp0}${color}${alignr}${color1}Down:${color} ${color3}${downspeed ppp0}${color}
+#${upspeedgraph ppp0 50,120 FF8800 FF8800}${alignr}${downspeedgraph ppp0 50,120 FF8800 FF8800}
+#${color1}Sent:${color} ${color2}${totalup ppp0}${color}${alignr}${color1}Received:${color} ${color2}${totaldown ppp0}${color}
+#${else}${if_existing /proc/net/route ppp1}
+#${color1}Up:${color} ${color3}${upspeed ppp1}${color}${alignr}${color1}Down:${color} ${color3}${downspeed ppp1}${color}
+#${upspeedgraph ppp1 50,120 FF8800 FF8800}${alignr}${downspeedgraph ppp1 50,120 FF8800 FF8800}
+#${color1}Sent:${color} ${color2}${totalup ppp1}${color}${alignr}${color1}Received:${color} ${color2}${totaldown ppp1}${color}
+#${else}
+#Network disconnected
+#${color6}Connect to a network to see statistics${color}
+#${voffset 50}
+#${endif}${endif}${endif}${endif}${endif}${endif}
+$alignc S Y S T E M I N F O
+${color8}${hr}${color}${color9}
+Hostname: $nodename${alignr}$sysname
+Kernel: $kernel${alignr}$machine
+Host:$alignr$nodename
+Uptime:$alignr$uptime
+RAM:$alignr$mem/$memmax
+${color8}${membar}${color}
+Swap usage:$alignr$swap/$swapmax
+${color8}${swapbar}${color}
+Disk usage:$alignr${fs_used /home}/${fs_size /home}
+${color8}${fs_bar}${color}
+CPU usage:${alignc}${cpu}%${alignr}${freq_g}Ghz
+${color4}${cpugraph}
+${color8}${hr}${color}﻿
+##################
+##   CALENDAR   ##
+##################
+#${voffset 5}${font Arial:bold:size=9.5}${color8}DATE ${color8}${hr 2}
+#${voffset 4}${font LiberationSansBold:size=10}${color8}${alignc 7}${execpi 60 VinDSL_Cal= date +'%B${offset 6}%Y'}
+#${voffset 2}${font LiberationMono:size=9.5}${execpi 60 VinDSL_Cal= cal | sed '1d' | sed -e 's/'`date | awk '{print $3}'`'/\$\{color4}'`date | awk '{print $3}'`'\$\{color3}/' | sed 's/^/${offset 36}${color5}/'}
+
+##################
+##   CALENDAR   ##
+##################
+#${voffset 5}${font Arial:bold:size=9.5}${color4}DATE ${color8}${hr 2}
+${voffset 2}${font LiberationMono:size=11}${color5}${alignc 5}${execpi 60 DJS=`date +%_d`; ncal -M -C -h| sed s/"\(^\|[^0-9]\)$DJS"'\b'/'\1${color black}'"$DJS"'$color5'/}
