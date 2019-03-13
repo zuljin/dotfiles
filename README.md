@@ -1,2 +1,2 @@
 # dotfiles
-my dotfiles or copied dotfiles
+dotfiles or copied dotfiles
