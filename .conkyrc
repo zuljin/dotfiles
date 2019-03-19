@@ -5,6 +5,10 @@ update_interval 1.0
 double_buffer yes
 no_buffers yes
 
+
+# Screens. Monitor: 2 #
+xinerama_head 2
+
 # Window specifications #
 own_window yes
 own_window_type normal
@@ -13,18 +17,27 @@ own_window_transparent false
 own_window_title Zuljin
 own_window_colour d6d5db
 
-minimum_size 230
-# Alignment #
+# for semi transparency
+own_window_argb_visual yes
+own_window_argb_value 180
+
+# Alignment and size #
 alignment top_right
 gap_x 20
 gap_y 15
 border_inner_margin 15
 border_outer_margin 0
+
+minimum_size 230
+minimum_width 250
+maximum_width 250
+
 # Graphics settings #
 draw_shades no
 draw_outline no
 draw_borders no
 draw_graph_borders no
+
 # Text settings #
 use_xft yes
 xftalpha 1
@@ -48,7 +61,9 @@ color8 ea4845
 color9 000000
 
 
+
 TEXT
+
 ${color8}${hr}${color}
 ${font Raleway:weight=Bold:size=44}${color8}${alignc}${time %H}${color}${font Raleway:weight=Regular:size=30}:${color9}${time %M}${alignc}
 ${font Raleway:weight=Medium:size=12}${alignc}${time %d %B %Y}
@@ -96,7 +111,22 @@ Disk usage:$alignr${fs_used /home}/${fs_size /home}
 ${color8}${fs_bar}${color}
 CPU usage:${alignc}${cpu}%${alignr}${freq_g}Ghz
 ${color4}${cpugraph}
-${color8}${hr}${color}﻿
+${color8}${hr}${color}${color9}
+${color8}$alignc T O P   P R O C E S S E S
+${color8}${hr}${color}${color9}
+${color8}${font sans-serif:bold:size=10} ${color}
+Name $alignr PID   CPU%   MEM%${font sans-serif:normal:size=10}
+${top name 1} $alignr ${top pid 1} ${top cpu 1}% ${top mem 1}%
+${top name 2} $alignr ${top pid 2} ${top cpu 2}% ${top mem 2}%
+${top name 3} $alignr ${top pid 3} ${top cpu 3}% ${top mem 3}%
+${top name 4} $alignr ${top pid 4} ${top cpu 4}% ${top mem 4}%
+${top name 5} $alignr ${top pid 5} ${top cpu 5}% ${top mem 5}%
+${top name 6} $alignr ${top pid 6} ${top cpu 6}% ${top mem 6}%
+${top name 7} $alignr ${top pid 7} ${top cpu 7}% ${top mem 7}%
+${top name 8} $alignr ${top pid 8} ${top cpu 8}% ${top mem 8}%
+${top name 9} $alignr ${top pid 9} ${top cpu 9}% ${top mem 9}%
+
+#https://www.deviantart.com/hundone/art/My-Conky-Config-1-3-60095106
 ##################
 ##   CALENDAR   ##
 ##################
