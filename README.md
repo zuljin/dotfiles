@@ -1,2 +1,2 @@
 # dotfiles
-my dotfiles, my personal conky included
+my dotfiles, conky config, others themes and configs
