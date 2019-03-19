@@ -1,2 +1,2 @@
 # dotfiles
-dotfiles or copied dotfiles
+my dotfiles, my personal conky included
