@@ -11,3 +11,7 @@ alias -- -="cd -"
 
 # Easy file access
 alias hosts="sudo vim /etc/hosts"
+
+# php unit
+alias testunit ="docker exec -ti php56 /datos/web/bkmdocapi/vendor/bin/phpunit datos/web/bkmdocapi/tests/Unit/ --c /datos/web/bkmdocapi/phpunit.xml"
+
