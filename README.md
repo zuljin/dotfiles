@@ -1,5 +1,5 @@
 # dotfiles
 my dotfiles, conky config, others themes and configs
 
-- terminator config: 
+- terminator config (ubuntu): 
   `vim ~/.config/terminator/config`
