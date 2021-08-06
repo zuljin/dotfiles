@@ -4,6 +4,6 @@ my dotfiles, conky config, others themes and configs
 - terminator config (ubuntu): 
   `vim ~/.config/terminator/config`
 
-# refresh deskto
+# refresh desktop
   - ALT+F2.
   - r, then Enter
