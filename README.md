@@ -9,7 +9,7 @@ my dotfiles, conky config, others themes and configs
   - r, then Enter
 
 # move dock ubuntu [TOP|BOTTOM|LEFT|RIGHT]
-```
+`
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
-``
+`
 
