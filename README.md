@@ -13,3 +13,7 @@ my dotfiles, conky config, others themes and configs
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
 `
 
+# install ConkyRC
+
+https://ubunlog.com/personaliza-tu-escritorio-con-conky/
+
